@@ -9,7 +9,7 @@ namespace ProjectBobby1
         static void Main()
         {
             try
-            {
+            { 
                 Item TestItem1 = new Item("Airpod", 35);
                 Item TestItem2 = new Item("Bag", 55);
                 Item TestItem3 = new Item("Cool Thing", 775);
