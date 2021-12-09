@@ -134,21 +134,33 @@ namespace ProjectBobby1
 
 
             //'testing loading
-            //testrobo.isloading = true;
-            //whcomp.dtruck_parked = true;
-            //whcomp.deliveryorderpopping.Add(item1);
-            //whcomp.deliveryorder.Add(item1);
-            //whcomp.warehouseinventory.Add("11R2", item1);
+            testrobo.isloading = true;
+            whcomp.dtruck_parked = true;
+            whcomp.deliveryorderpopping.Add(item1);
+            whcomp.deliveryorderpopping.Add(item2);
+            whcomp.deliveryorderpopping.Add(item3);
+            whcomp.deliveryorderpopping.Add(item4);
+            whcomp.deliveryorderpopping.Add(item5);
+            whcomp.deliveryorder.Add(item1);
+            whcomp.deliveryorder.Add(item2);
+            whcomp.deliveryorder.Add(item3);
+            whcomp.deliveryorder.Add(item4);
+            whcomp.deliveryorder.Add(item5);
+            whcomp.warehouseinventory.Add("11R2", item1);
+            whcomp.warehouseinventory.Add("22R2", item2);
+            whcomp.warehouseinventory.Add("33R2", item3);
+            whcomp.warehouseinventory.Add("24R2", item4);
+            whcomp.warehouseinventory.Add("25R2", item5);
 
 
             //'testing unloading
-            testrobo.isunloading = true;
-            whcomp.rtruck_parked = true;
-            rtruck.restockingitems.Enqueue(item1);
-            rtruck.restockingitems.Enqueue(item2);
-            rtruck.restockingitems.Enqueue(item3);
-            rtruck.restockingitems.Enqueue(item4);
-            rtruck.restockingitems.Enqueue(item5);
+            //testrobo.isunloading = true;
+            //whcomp.rtruck_parked = true;
+            //rtruck.restockingitems.Enqueue(item1);
+            //rtruck.restockingitems.Enqueue(item2);
+            //rtruck.restockingitems.Enqueue(item3);
+            //rtruck.restockingitems.Enqueue(item4);
+            //rtruck.restockingitems.Enqueue(item5);
 
 
             //if truck has left and donetask flag is true, then stop the loop
@@ -157,8 +169,8 @@ namespace ProjectBobby1
             //stuff needed to be put on it then it sets donetask back to false for the loading robot
             //robot has donetask set to false when it grabs another item from the restocking truck, or just as long as its isunload =true and its carrieditems length is above 0 its donetask is set to false?? this part maybe not good method
 
-            //while (whcomp.dtruck_parked || testrobo.donetask == false)
-            while (whcomp.rtruck_parked || testrobo.donetask == false)//truck must be gone and robot must be done task for the loop to stop, can add other truck to this as well
+            while (whcomp.dtruck_parked || testrobo.donetask == false)
+            //while (whcomp.rtruck_parked || testrobo.donetask == false)//truck must be gone and robot must be done task for the loop to stop, can add other truck to this as well
             //while (testrobo.isunloading)
             // for (int t=0; t<10; t++)
             {
